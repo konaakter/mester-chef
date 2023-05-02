@@ -11,17 +11,20 @@ const Home = () => {
             <div>
                 <Banner></Banner>
             </div>
-            <div>
-                
+            <div className=' bg-zinc-800'>
+                <div className=' container mx-auto pt-24 pb-16 lg:grid grid-cols-4 '>
+
                     {
                         loders.map(loder => <ChefCard
-                        loder={loder}
-                        
+                            loder={loder}
+
                         >
 
                         </ChefCard>)
                     }
-                
+
+                </div>s
+
             </div>
 
         </div>
