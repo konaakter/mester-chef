@@ -11,7 +11,7 @@ const Home = () => {
             <div>
                 <Banner></Banner>
             </div>
-            <div className=' color'>
+            <div className=' bg-color'>
                 <div className=' container mx-auto pt-24 pb-16 lg:grid grid-cols-4 '>
 
                     {

@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import Chefood from '../Chefood/Chefood';
 
 const ChefDeatails = () => {
     const loders = useLoaderData();
@@ -7,7 +8,7 @@ const ChefDeatails = () => {
     const { bio, _id, name, experience, numberOfRecipe, recipes, photo } = loders;
     return (
         <div>
-            <div className=' color '>
+            <div className=' bg-color '>
                 <div className='grid grid-cols-2 gap-56 container mx-auto pt-32  pb-14'>
                     <div className='my-auto text-white'>
                         <h1 className='text-8xl color mb-2'>{name}</h1>
@@ -25,11 +26,12 @@ const ChefDeatails = () => {
                 </div>
             </div>
             <div>
-                {
-                    recipes.map(recip => <ChefDeatails
-                        recip={recip}
-                    ></ChefDeatails>)
-                }
+               {
+                recipes.map(recipe => <Chefood
+                recipe={recipe}
+                
+                ></Chefood>)
+               }
             </div>
         </div>
     );
