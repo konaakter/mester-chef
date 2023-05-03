@@ -19,10 +19,4 @@ const app = initializeApp(firebaseConfig);
 export default app;
 
 
-/*apiKey: "AIzaSyB1vw59LzB4qj4ddMy8-3zB-MiRQ7cNS-k",
-  authDomain: "chef-master-53d9c.firebaseapp.com",
-  projectId: "chef-master-53d9c",
-  storageBucket: "chef-master-53d9c.appspot.com",
-  messagingSenderId: "1000643163200",
-  appId: "1:1000643163200:web:b4bf2ce74002a359f0dba5"
-};*/
+
