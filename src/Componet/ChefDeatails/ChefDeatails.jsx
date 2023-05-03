@@ -25,13 +25,16 @@ const ChefDeatails = () => {
 
                 </div>
             </div>
-            <div>
-               {
-                recipes.map(recipe => <Chefood
-                recipe={recipe}
-                
-                ></Chefood>)
-               }
+            <div className='bg-black'>
+                <div className=' py-24'>
+                    {
+                        recipes.map(recipe => <Chefood
+                            recipe={recipe}
+
+                        ></Chefood>)
+                    }
+                </div>
+
             </div>
         </div>
     );
