@@ -2,6 +2,7 @@ import React from 'react';
 import Banner from '../Banner/Banner';
 import ChefCard from '../ChefCard/ChefCard';
 import { useLoaderData } from 'react-router-dom';
+import Restudetchef from '../Restudetchef/Restudetchef';
 
 const Home = () => {
     const loders = useLoaderData();
@@ -23,8 +24,13 @@ const Home = () => {
                         </ChefCard>)
                     }
 
-                </div>s
+                </div>
 
+            </div>
+            <div className='bg-color'>
+                <div className='container mx-auto'>
+                <Restudetchef></Restudetchef>
+                </div>
             </div>
 
         </div>
