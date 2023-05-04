@@ -13,7 +13,7 @@ const Home = () => {
                 <Banner></Banner>
             </div>
             <div className=' bg-color'>
-                <div className=' container mx-auto pt-24 pb-16 lg:grid grid-cols-4 '>
+                <div className=' container mx-auto pt-24 pb-16 lg:grid grid-cols-3 '>
 
                     {
                         loders.map(loder => <ChefCard

@@ -8,7 +8,7 @@ const ChefCard = (props) => {
 
     return (
         <div>
-            <div className='text-white t' >
+            <div className='text-white text-center' >
                 <div className='px-7 py-16 bg-black'>
                     <img className='h-80 w-50 mx-auto hover:rounded-bl-lg ' src={photo} alt="" />
                     <h1 className=' pt-5'>{name}</h1>

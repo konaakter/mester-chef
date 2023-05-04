@@ -8,13 +8,13 @@ const Chefood = (props) => {
     return (
         <div className=''>
             <div className='container mx-auto mb-8' >
-                <div className=" text-white flex flex-row bg-color justify-between p-10 border-b border-zinc-200 ">
+                <div className=" text-white lg:flex flex-row bg-color justify-between p-10 border-b border-zinc-200 ">
 
                     <div className=' border border-orange-300 p-2  '>
                         <img className=' lg:h-72 w-80  p-2 ' src={log} />
                     </div>
-                    <div className=" ">
-                        <h2 className="">{name}</h2>
+                    <div className='lg:mt-1 mt-6 '>
+                        <h2>{name}</h2>
                         <div>
                             {
                                 ingredients.map(ingredient => <li>{
@@ -24,7 +24,7 @@ const Chefood = (props) => {
                         <div>
                             <p>{
                                 cooking_method.length < 100 ? <>{cooking_method}</> : <> {cooking_method.slice(0, 100)}....
-                                    <Link >Read more</Link> </>
+                                <Link >Read more</Link> </>
 
                             }
                             </p>

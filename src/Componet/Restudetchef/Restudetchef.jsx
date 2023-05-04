@@ -7,13 +7,13 @@ const Restudetchef = () => {
     return (
         <div className=' '>
             <h1>kona</h1>
-            <div className='grid grid-cols-2 gap-6 pb-28'>
+            <div className=' lg:grid grid-cols-2 gap-6 pb-28'>
                 <div>
                     <img className=' ps-10 h-96' src={log1} alt="" />
                     <img className=' -mt-20  h-72' src={log2} alt="" srcset="" />
                     
                 </div>
-                <div className=' mt-24 text-white'>
+                <div className=' mt-20 text-white mx-6'>
                     <h1 className=' text-6xl color pb-7'>Between Heaven & Earth</h1>
                     <hr className=' w-40'></hr>
                     <p className=' pb-5 pt-8 text-1xl'>The character and philosophy of our type of cuisine, which follows the ancestral technique of using different types of firewood, fire,charcoal and the scented trace of the smoke, inherently results in a limitation on the number of diners that we can accommodate without sacrificing our essence.

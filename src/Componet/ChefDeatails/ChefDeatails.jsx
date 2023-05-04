@@ -9,8 +9,8 @@ const ChefDeatails = () => {
     return (
         <div>
             <div className=' bg-color '>
-                <div className='grid grid-cols-2 gap-56 container mx-auto pt-32  pb-14'>
-                    <div className='my-auto text-white'>
+                <div className='lg:grid grid-cols-2 gap-56 container mx-auto pt-32  pb-14'>
+                    <div className='my-auto text-white m-5'>
                         <h1 className='text-8xl color mb-2'>{name}</h1>
                         <p className=' mb-4 text-center'> Number of recipe: {recipes.length}</p>
                         <p className='mb-4'>{bio}</p>
@@ -19,7 +19,7 @@ const ChefDeatails = () => {
 
                     </div>
                     <div>
-                        <img className='w-full p-2  border border-orange-300' src={photo} alt="" />
+                        <img className='w-full p-2  border border-orange-300 m-3' src={photo} alt="" />
 
                     </div>
 
