@@ -5,6 +5,7 @@ import Banner from "../Componet/Banner/Banner";
 import Registatoin from "../Componet/Registatoin/Registatoin";
 import Home from "../Componet/Home/Home";
 import ChefDeatails from "../Componet/ChefDeatails/ChefDeatails";
+import Privaterouter from "../Privaterouter/Privaterouter";
 
 const router = createBrowserRouter([
     {
@@ -19,7 +20,7 @@ const router = createBrowserRouter([
 
             {
                 path: "/chef/:id",
-                element: <ChefDeatails></ChefDeatails>,
+                element: <Privaterouter><ChefDeatails></ChefDeatails></Privaterouter> ,
                 loader: ({params}) => fetch(`https://master-chef-kona-server-konaakter.vercel.app/chef/${params.id}`)
               },
             {

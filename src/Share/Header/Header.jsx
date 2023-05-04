@@ -1,21 +1,21 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../../Providers/Authprovider';
 
 
 const Header = () => {
-    const {user, logOut} = useContext(AuthContext);
+    const { user, logOut } = useContext(AuthContext);
 
-    const handleSignout = () =>{
+    const handleSignout = () => {
         logOut()
-        .then ()
+            .then()
 
-        .catch (error =>{
-            console.log(error)
-        })
+            .catch(error => {
+                console.log(error)
+            })
     }
 
-    
+
     return (
         <div >
             <div className='border-dashed border-b-2 border-slate-100  bg-zinc-800'>
@@ -45,9 +45,31 @@ const Header = () => {
                     </div>
                     <div className="navbar-center hidden lg:flex">
                         <ul className="menu menu-horizontal px-1 ">
-                            <Link to='/login' className='pe-5'>Home</Link>
-                            <Link to='/logi' className='pe-5'>Blog</Link>
-                            <Link className='pe-5'>Contract</Link>
+                            <li>
+                                <NavLink
+                                    to='/'
+                                    className={({ isActive }) => (isActive ? 'active' : 'default')}
+                                >
+                                    Home
+                                </NavLink>
+                            </li>
+
+                            <li>
+                                <NavLink
+                                    to='login'
+                                    className={({ isActive }) => (isActive ? 'active' : 'default')}
+                                >
+                                    contract
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink
+                                    to='logi'
+                                    className={({ isActive }) => (isActive ? 'active' : 'default')}
+                                >
+                                    blog
+                                </NavLink>
+                            </li>
                         </ul>
                     </div>
                     <div className="navbar-end ">
@@ -58,11 +80,11 @@ const Header = () => {
                         </p>
                         <p>
                             {
-                                user ?  <button onClick={handleSignout }>logout</button> : <Link to='/logi'><button>login</button></Link>
+                                user ? <button onClick={handleSignout}>logout</button> : <Link to='/logi'><button>login</button></Link>
                             }
                         </p>
-                        
-                        
+
+
                     </div>
                 </div>
             </div>

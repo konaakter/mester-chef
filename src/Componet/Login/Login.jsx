@@ -1,10 +1,14 @@
 import React, { useContext, useState } from 'react';
 import { AuthContext } from '../../Providers/Authprovider';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const Login = () => {
     const {Loginemailpassword, gogoleprover, GithubSing } = useContext(AuthContext);
     const [error, seterror] = useState('');
+    let navigate = useNavigate();
+
+    const location = useLocation();
+    const form = location.state?.from?.pathname || "/";
 
 
     const handlelogin = (event) =>{
@@ -17,6 +21,8 @@ const Login = () => {
             const reuser = result.user;
             console.log(reuser);
             event.target.reset();
+
+            navigate(form, {replace : true});
         })
         .catch(error => {
             console.log(error);

@@ -18,7 +18,7 @@ import { useState } from 'react';
 
 const Authprovider = ({children})=> {
     const [user, setuser] = useState(null);
-
+    const[loding, setloding] = useState(true);
 
     const SignInRegintatoin = (email, password) =>{
        return createUserWithEmailAndPassword(auth, email, password);
@@ -46,7 +46,9 @@ const Authprovider = ({children})=> {
             console.log('auth sate change', currentuser)
             setuser(currentuser)
         })
-        return unsubscribe;
+        return () =>{
+            unsubscribe();
+        };
 
 
     }, [])
