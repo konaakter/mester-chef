@@ -1,24 +1,39 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { AuthContext } from '../../Providers/Authprovider';
+import { Link } from 'react-router-dom';
 
 
 const Registatoin = () => {
     const {SignInRegintatoin} = useContext(AuthContext);
     console.log(SignInRegintatoin);
+
+    const [error, seterror] = useState('')
+    const [succes, setsucces] =useState('')
      const handleREgintatoin = (event) => {
         event.preventDefault();
+        setsucces('');
+        seterror('');
+
         const name = event.target.name.value;
         const email = event.target.email.value;
         const password = event.target.password.value;
         console.log(name, email, password)
+
+
+        if(password.length<6){
+           return seterror('Please add at least 6 chahacters in you password ')
+        }
         SignInRegintatoin(email, password)
         .then(result =>{
             const reuser = result.user;
             console.log(reuser);
             event.target.reset();
+            seterror('')
+           alert('YOu has been created succesfully')
         })
         .catch(error => {
-            console.log(error);
+            console.log(error.message);
+            seterror(error.message)
         })
      }
 
@@ -64,10 +79,14 @@ const Registatoin = () => {
                                 <label className="label">
                                     <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                                 </label>
+                                
                             </div>
                             <div className="form-control mt-6">
                                 <button className="btn btn-primary mb-2">Login</button>
+                                <p className=' text-red-600'>{error}</p>
                             </div>
+                            <p> <small>Allready account ? please <Link className=' text-primary' to='/logi'>Login</Link></small></p>
+
                         </div>
                     </form>
         

@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { AuthContext } from '../../Providers/Authprovider';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
     const {Loginemailpassword, gogoleprover, GithubSing } = useContext(AuthContext);
@@ -77,6 +78,7 @@ const Login = () => {
                                 <button onClick={handlergoogle} className="btn btn-primary mb-2 ">Google</button>
                                 <button onClick={handleGithub} className="btn btn-primary ">Github</button>
                             </div>
+                            <p> <small>New to this website ? please <Link className=' text-primary' to='/login'>Registatoin</Link></small></p>
                         </div>
                     </form>
                 </div>
