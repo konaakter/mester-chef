@@ -21,10 +21,13 @@ const Authprovider = ({children})=> {
     const[loding, setloding] = useState(true);
 
     const SignInRegintatoin = (email, password) =>{
+        setloding(true);
        return createUserWithEmailAndPassword(auth, email, password);
 
     }
     const Loginemailpassword = (email, password) => {
+
+        setloding(true);
         return signInWithEmailAndPassword(auth, email, password)
     }
 
@@ -37,6 +40,7 @@ const Authprovider = ({children})=> {
     }
 
     const logOut = () =>{
+        setloding(true);
         return signOut(auth);
     }
 
@@ -45,6 +49,7 @@ const Authprovider = ({children})=> {
       const unsubscribe =  onAuthStateChanged (auth, currentuser=>{
             console.log('auth sate change', currentuser)
             setuser(currentuser)
+            setloding(false)
         })
         return () =>{
             unsubscribe();
@@ -60,7 +65,8 @@ const Authprovider = ({children})=> {
         Loginemailpassword,
         gogoleprover,
         GithubSing,
-        logOut
+        logOut,
+        loding
          
 
 
