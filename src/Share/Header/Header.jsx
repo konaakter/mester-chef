@@ -41,7 +41,7 @@ const Header = () => {
                                 <li><a>Item 3</a></li>
                             </ul>
                         </div>
-                        <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+                        <a className=" normal-case text-xl font-bold color">Chef-Point</a>
                     </div>
                     <div className="navbar-center hidden lg:flex">
                         <ul className="menu menu-horizontal px-1 ">
@@ -56,7 +56,7 @@ const Header = () => {
 
                             <li>
                                 <NavLink
-                                    to='login'
+                                    to='/logi'
                                     className={({ isActive }) => (isActive ? 'active' : 'default')}
                                 >
                                     contract
@@ -64,7 +64,7 @@ const Header = () => {
                             </li>
                             <li>
                                 <NavLink
-                                    to='logi'
+                                    to='/blog'
                                     className={({ isActive }) => (isActive ? 'active' : 'default')}
                                 >
                                     blog
@@ -80,7 +80,7 @@ const Header = () => {
                         </p>
                         <p>
                             {
-                                user ? <button onClick={handleSignout}>logout</button> : <Link to='/logi'><button>login</button></Link>
+                                user ? < button className='boton px-8 py-2 mt-4' onClick={handleSignout}>logout</button> : <Link to='/logi'><button className='boton px-8 py-2 mt-4'>login</button></Link>
                             }
                         </p>
 

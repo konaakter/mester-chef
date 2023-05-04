@@ -6,6 +6,7 @@ import Registatoin from "../Componet/Registatoin/Registatoin";
 import Home from "../Componet/Home/Home";
 import ChefDeatails from "../Componet/ChefDeatails/ChefDeatails";
 import Privaterouter from "../Privaterouter/Privaterouter";
+import Blog from "../Componet/Blog/Blog";
 
 const router = createBrowserRouter([
     {
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
                 path: "login",
                 element: <Registatoin></Registatoin>,
             },
+            {
+                path:"/blog",
+                element: <Blog></Blog>
+            }
 
 
         ],
