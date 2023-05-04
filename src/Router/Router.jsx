@@ -14,13 +14,13 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Home></Home>,
-                loader: () => fetch(`http://localhost:5000/chef`)
+                loader: () => fetch(`https://master-chef-kona-server-konaakter.vercel.app/chef`)
             },
 
             {
                 path: "/chef/:id",
                 element: <ChefDeatails></ChefDeatails>,
-                loader: ({params}) => fetch(`http://localhost:5000/chef/${params.id}`)
+                loader: ({params}) => fetch(`https://master-chef-kona-server-konaakter.vercel.app/chef/${params.id}`)
               },
             {
                 path: "logi",
