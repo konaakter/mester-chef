@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 
 const Registatoin = () => {
-    const {SignInRegintatoin} = useContext(AuthContext);
+    const {SignInRegintatoin, updatUser} = useContext(AuthContext);
     console.log(SignInRegintatoin);
 
     const [error, seterror] = useState('')
@@ -15,6 +15,7 @@ const Registatoin = () => {
         seterror('');
 
         const name = event.target.name.value;
+        const photo = event.target.photo.value;
         const email = event.target.email.value;
         const password = event.target.password.value;
         console.log(name, email, password)
@@ -35,7 +36,21 @@ const Registatoin = () => {
             console.log(error.message);
             seterror(error.message)
         })
+         updatUser(name, photo)
+        .then(result =>{
+            const photo = result.user;
+            console.log(photo);
+
+        })
+        .catch(error => {
+            console.log(error.message);
+        })
+
+
+
+
      }
+
 
 
 
@@ -61,7 +76,7 @@ const Registatoin = () => {
                                 <label className="label">
                                     <span className="label-text">Photo URL</span>
                                 </label>
-                                <input type="text" name='name' placeholder="Photo Url" className="input input-bordered" required />
+                                <input type="text" name='photo' placeholder="Photo Url" className="input input-bordered" required />
                             </div>
                             <div className="form-control">
                                 <label className="label">

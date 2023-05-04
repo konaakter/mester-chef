@@ -1,5 +1,5 @@
 import React, { createContext, useEffect } from 'react';
-import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
+import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import app from '../firebase/firebase.config';
 import { useState } from 'react';
 
@@ -44,6 +44,14 @@ const Authprovider = ({children})=> {
         return signOut(auth);
     }
 
+    const updatUser = (name, photo) => {
+        setloding(true);
+        return updateProfile(auth.currentUser, {
+            displayName: name,
+            photoURL: photo
+        });
+    }
+
     useEffect(() => {
 
       const unsubscribe =  onAuthStateChanged (auth, currentuser=>{
@@ -66,7 +74,8 @@ const Authprovider = ({children})=> {
         gogoleprover,
         GithubSing,
         logOut,
-        loding
+        loding,
+        updatUser
          
 
 

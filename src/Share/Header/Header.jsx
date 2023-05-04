@@ -80,7 +80,14 @@ const Header = () => {
                         </p>
                         <p>
                             {
-                                user ? < button className='boton px-8 py-2 mt-4' onClick={handleSignout}>logout</button> : <Link to='/logi'><button className='boton px-8 py-2 mt-4'>login</button></Link>
+                                user ?
+                                    <span className='flex gap-6 justify-center content-center'>
+                                        {
+                                            user.photoURL &&
+                                            <img className='w-12 rounded-full' title={user.displayName ? user.displayName : ''} src={user.photoURL} />
+                                        }
+                                        <Link onClick={logOut} className="btn">LogOut</Link> </span>
+                                    : <Link to={'/login'} className="btn">Login</Link>
                             }
                         </p>
 
@@ -94,3 +101,7 @@ const Header = () => {
 };
 
 export default Header;
+
+/* {
+                                user ? < button className='boton px-8 py-2 mt-4' onClick={handleSignout}>logout</button> : <Link to='/logi'><button className='boton px-8 py-2 mt-4'>login</button></Link>
+                            }*/

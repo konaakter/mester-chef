@@ -13,7 +13,7 @@ const Chefood = (props) => {
                     <div className=' border border-orange-300 p-2  '>
                         <img className=' lg:h-72 w-80  p-2 ' src={log} />
                     </div>
-                    <div className='lg:mt-1 mt-6 '>
+                    <div className='lg:mt-1 mt-6 ms-12'>
                         <h2>{name}</h2>
                         <div>
                             {
@@ -23,8 +23,7 @@ const Chefood = (props) => {
                         </div>
                         <div>
                             <p>{
-                                cooking_method.length < 100 ? <>{cooking_method}</> : <> {cooking_method.slice(0, 100)}....
-                                <Link >Read more</Link> </>
+                                cooking_method
 
                             }
                             </p>
