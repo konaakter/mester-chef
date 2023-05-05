@@ -1,10 +1,19 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useNavigate } from 'react-router-dom';
 import Chefood from '../Chefood/Chefood';
 import { FaThumbsUp } from 'react-icons/fa';
 import LazyLoad from 'react-lazy-load';
 
 const ChefDeatails = () => {
+    const navigation = useNavigate();
+    console.log(navigation.state)
+    if (navigation.state == 'loading') {
+        return <div className='text-center border  container mx-auto  px-16 py-36 mt-16'>
+
+            <div className="radial-progress bg-primary text-primary-content border-4 border-primary w-auto h-auto" style={{ "--value": 70 }}>70%</div>
+            <h1 className=' text-7xl'>Lodindg</h1>
+        </div>
+    }
     const loders = useLoaderData();
     console.log(loders);
     const { bio, _id, name, experience, numberOfRecipe, recipes, photo, likes } = loders;
@@ -40,7 +49,7 @@ const ChefDeatails = () => {
                     </div>
                     <div>
                         <LazyLoad>
-                        <img className='w-full p-2  border border-orange-300 m-3' src={photo} alt="" />
+                            <img className='w-full p-2  border border-orange-300 m-3' src={photo} alt="" />
 
 
                         </LazyLoad>

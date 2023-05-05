@@ -1,12 +1,21 @@
 import React from 'react';
 import Banner from '../Banner/Banner';
 import ChefCard from '../ChefCard/ChefCard';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useNavigate } from 'react-router-dom';
 import Restudetchef from '../Restudetchef/Restudetchef';
 import Foodpic from '../Foodpic/Foodpic';
 
 const Home = () => {
-    <progress className="progress w-56"></progress>
+    const navigation = useNavigate();
+    console.log(navigation.state)
+    if (navigation.state == 'loading') {
+        return <div className='text-center   container mx-auto  px-16 py-36 mt-16'>
+            <progress className="progress w-56"></progress>
+            <progress className="progress progress-info w-56" value="70" max="100"></progress>
+            
+            <h1 className=' text-9xl text-black'>Lodindg</h1>
+        </div>
+    }
     const loders = useLoaderData();
     console.log(loders);
     return (
@@ -16,7 +25,7 @@ const Home = () => {
             </div>
             {/* ******************************************chef card************************ */}
             <div className=' bg-color'>
-            <h1 className='text-center text-6xl font-bold color pt-36 pb-6'>FRANCH <span className='text-white'> COUSIN SHEF</span> </h1>
+                <h1 className='text-center text-6xl font-bold color pt-36 pb-6'>FRENCE<span className='text-white'> CUISINE CHEF</span> </h1>
 
 
                 <div className=' container mx-auto pt-24 pb-16 lg:grid grid-cols-3 '>
@@ -36,7 +45,7 @@ const Home = () => {
             {/************************************ home ar 3 section */}
             <div className='bg-color'>
                 <div className='container mx-auto'>
-                <Restudetchef></Restudetchef>
+                    <Restudetchef></Restudetchef>
                 </div>
             </div>
             {/* fotter******************************************************************************* */}

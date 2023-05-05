@@ -5,20 +5,13 @@ import { ToastContainer, toast } from 'react-toastify';
 
 
 const Registatoin = () => {
-    const {SignInRegintatoin, updatUser, loding} = useContext(AuthContext);
+    const {SignInRegintatoin, updatUser} = useContext(AuthContext);
     console.log(SignInRegintatoin);
 
     const [error, seterror] = useState('')
     const [succes, setsucces] =useState('')
 
 
-    if (loding) {
-        return  <div className='text-center border  container mx-auto  px-16 py-36 mt-16 '>
-            
-            <div className="radial-progress bg-primary text-primary-content border-4 border-primary w-auto h-auto" style={{ "--value": 70 }}>70%</div>
-            <h1 className=' text-7xl'>Lodindg</h1>
-        </div>
-    }
      const handleREgintatoin = (event) => {
         event.preventDefault();
         setsucces('');
@@ -36,25 +29,16 @@ const Registatoin = () => {
            return seterror('Please add at least 6 chahacters in you password ')
         }
         SignInRegintatoin(email, password)
-        .then(result =>{
+        .then(async result =>{
             const reuser = result.user;
             console.log(reuser);
-            seterror('');
+            await updatUser(name, photo);
             event.target.reset();
             toast('YOu has been created succesfully')
         })
         .catch(error => {
             console.log(error.message);
             seterror(error.message)
-        })
-         updatUser(name, photo)
-        .then(result =>{
-            const photo = result.user;
-            console.log(photo);
-
-        })
-        .catch(error => {
-            console.log(error.message);
         })
 
 
