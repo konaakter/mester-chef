@@ -1,4 +1,4 @@
-# https://chef-recipe-hunter-ddc68.web.app/
+
 * Google and GitHub channels are authenticated
 * Login by email and password
 * The recipe is router protected

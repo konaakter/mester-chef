@@ -18,75 +18,72 @@ const Header = () => {
 
     return (
         <div >
-            <div className='border-dashed border-b-2 border-slate-100  bg-zinc-800'>
+            <div className='border-dashed border-b-2 border-slate-100 bg-zinc-800'>
 
                 <div className="navbar  container mx-auto text-slate-50">
                     <div className="navbar-start">
-                        <div className="dropdown bg-color ">
+                        <div className="dropdown">
                             <label tabIndex={0} className="btn btn-ghost lg:hidden">
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                             </label>
-                            <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-black rounded-box w-52">
-                            <li>
-                                <NavLink
-                                    to='/'
-                                    className={({ isActive }) => (isActive ? 'active' : 'default')}
-                                >
-                                    Home
-                                </NavLink>
-                            </li>
+                            <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-color rounded-box w-52">
+                                
+                                    <NavLink
+                                        to='/'
+                                        className={({ isActive }) => (isActive ? ' text-orange-300' : 'default')}
+                                    >
+                                        Home
+                                    </NavLink>
+                                
 
 
-                                    <ul className="p-2  ">
-                                        <li>
-                                            <NavLink
-                                                to='/logi'
-                                                className={({ isActive }) => (isActive ? 'active' : 'default')}
-                                            >
-                                                contract
-                                            </NavLink>
-                                        </li>
+                                
+                                    
+                                        <NavLink
+                                            to='/logi'
+                                            className={({ isActive }) => (isActive ? 'text-orange-300' : 'default')}
+                                        >
+                                            contract
+                                        </NavLink>
+                                    
 
-                                    </ul>
-                                <li>
+                            
+                                
                                     <NavLink
                                         to='/blog'
-                                        className={({ isActive }) => (isActive ? 'active' : 'default')}
+                                        className={({ isActive }) => (isActive ? 'text-orange-300' : 'default')}
                                     >
                                         blog
                                     </NavLink>
-                                </li>
+                                
                             </ul>
                         </div>
                         <a className=" normal-case text-xl font-bold color">Chef-Point</a>
                     </div>
                     <div className="navbar-center hidden lg:flex">
-                        <ul className="menu menu-horizontal px-1 ">
-                            <li>
-                                <NavLink
-                                    to='/'
-                                    className={({ isActive }) => (isActive ? 'active' : 'default')}
-                                >
-                                    Home
-                                </NavLink>
-                            </li>
+                        <ul className="menu menu-horizontal  items-center gap-6">
 
-                            <li>
-                                <NavLink
-                                    to='/logi'
-                                    className={({ isActive }) => (isActive ? 'active' : 'default')}
-                                >
-                                    contract
-                                </NavLink>
-                            </li>
-                            <li>
-                                <NavLink
-                                    to='/blog'
-                                    className={({ isActive }) => (isActive ? 'active' : 'default')}
-                                >
-                                    blog
-                                </NavLink>
-                            </li>
+                            <NavLink
+                                to='/'
+                                className={({ isActive }) => (isActive ? 'text-orange-300' : 'default')}
+                            >
+                                Home
+                            </NavLink>
+
+
+                            <NavLink
+                                to='/logi'
+                                className={({ isActive }) => (isActive ? 'text-orange-300' : '')}
+                            >
+                                contract
+                            </NavLink>
+
+                            <NavLink
+                                to='/blog'
+                                className={({ isActive }) => (isActive ? 'text-orange-300' : 'default')}
+                            >
+                                blog
+                            </NavLink>
                         </ul>
                     </div>
                     <div className="navbar-end ">
@@ -104,7 +101,7 @@ const Header = () => {
                                             <img className='w-12 rounded-full' title={user.displayName ? user.displayName : ''} src={user.photoURL} />
                                         }
                                         <Link onClick={logOut} className="btn">LogOut</Link> </span>
-                                    : <Link to={'/login'} className="btn">Login</Link>
+                                    : <Link to={'/logi'} className="btn">Login</Link>
                             }
                         </p>
 

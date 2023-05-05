@@ -7,11 +7,13 @@ import Home from "../Componet/Home/Home";
 import ChefDeatails from "../Componet/ChefDeatails/ChefDeatails";
 import Privaterouter from "../Privaterouter/Privaterouter";
 import Blog from "../Componet/Blog/Blog";
+import Errorpage from "../Componet/Errorpage/Errorpage";
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <Main></Main>,
+        errorElement : <Errorpage></Errorpage>,
         children: [
             {
                 path: "/",

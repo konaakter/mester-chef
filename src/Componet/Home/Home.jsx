@@ -6,6 +6,7 @@ import Restudetchef from '../Restudetchef/Restudetchef';
 import Foodpic from '../Foodpic/Foodpic';
 
 const Home = () => {
+    <progress className="progress w-56"></progress>
     const loders = useLoaderData();
     console.log(loders);
     return (

@@ -1,9 +1,11 @@
 import React from 'react';
 import logo6 from '../../imge/chef2.jpg'
 import { Link } from 'react-router-dom';
+import { FaThumbsUp } from 'react-icons/fa';
 
 const ChefCard = (props) => {
-    const { bio, _id, name, experience, numberOfRecipe, recipes, photo } = props.loder;
+
+    const { bio, _id, name, experience, numberOfRecipe, recipes, photo, likes } = props.loder;
 
 
     return (
@@ -13,9 +15,22 @@ const ChefCard = (props) => {
                     <img className='h-80 w-50 mx-auto hover:rounded-bl-lg ' src={photo} alt="" />
                     <h1 className=' pt-5'>{name}</h1>
                     <p>{experience}</p>
-                    <p>Number of recipes : {recipes.length}</p>
-                    
-                        <button className='boton px-8 py-2 mt-4'> <Link to={`/chef/${_id}`}>Veiws more</Link></button>
+                    <div className='flex flex-row justify-evenly'>
+                        <div className='flex flex-row gap-2 items-center'>
+                            <p>recipes:</p>
+                            <p>{recipes.length}</p>
+                        </div>
+                        <div className='flex flex-row gap-2 items-center'>
+                            <FaThumbsUp className=' text-primary text-xl'></FaThumbsUp>
+
+                            <p>{likes}</p>
+
+                        </div>
+
+
+                    </div>
+
+                    <button className='boton px-8 py-2 mt-4'> <Link to={`/chef/${_id}`}>Veiws more</Link></button>
                 </div>
             </div>
 

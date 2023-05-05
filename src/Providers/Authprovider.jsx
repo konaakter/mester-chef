@@ -28,7 +28,7 @@ const Authprovider = ({children})=> {
     const Loginemailpassword = (email, password) => {
 
         setloding(true);
-        return signInWithEmailAndPassword(auth, email, password)
+        return signInWithEmailAndPassword(auth, email, password);
     }
 
     const gogoleprover = () =>{
