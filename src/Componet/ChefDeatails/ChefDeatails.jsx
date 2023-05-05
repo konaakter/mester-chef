@@ -49,7 +49,7 @@ const ChefDeatails = () => {
                     </div>
                     <div>
                         <LazyLoad>
-                            <img className='w-full p-2  border border-orange-300 m-3' src={photo} alt="" />
+                            <img className='lg:w-full w-80 mx-auto p-2  border border-orange-300 m-3' src={photo} alt="" />
 
 
                         </LazyLoad>

@@ -11,8 +11,8 @@ const Restudetchef = () => {
         <div className=' pt-32 '>
             <div className=' lg:grid grid-cols-2 gap-6 pb-28'>
                 <div>
-                    <img className=' ps-10 h-96' src={log1} alt="" />
-                    <img className=' -mt-20  h-72' src={log2} alt="" srcset="" />
+                    <img className=' ps-10 h-60 lg:h-96 lg:w-auto w-96' src={log1} alt="" />
+                    <img className=' lg:-mt-20 -mt-24 h-56  lg:h-72 lg:w-auto w-56 ms-7 lg:ms-1' src={log2} alt="" srcset="" />
                     
                 </div>
                 <div className=' mt-20 text-white mx-6'>

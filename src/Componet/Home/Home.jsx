@@ -25,7 +25,7 @@ const Home = () => {
             </div>
             {/* ******************************************chef card************************ */}
             <div className=' bg-color'>
-                <h1 className='text-center text-6xl font-bold color pt-36 pb-6'>FRENCE<span className='text-white'> CUISINE CHEF</span> </h1>
+                <h1 className='text-center lg:text-6xl text-3xl font-bold color lg:pt-36 pt-10 lg:pb-6 pb-3'>FRENCE<span className='text-white'> CUISINE CHEF</span> </h1>
 
 
                 <div className=' container mx-auto pt-24 pb-16 lg:grid grid-cols-3 '>
