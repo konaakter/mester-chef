@@ -4,9 +4,11 @@ import log1 from '../../imge/bg4.jpg'
 
 
 const Restudetchef = () => {
+
+
+    /***************************************************home 3ed sectoin************************ */
     return (
-        <div className=' '>
-            <h1>kona</h1>
+        <div className=' pt-32 '>
             <div className=' lg:grid grid-cols-2 gap-6 pb-28'>
                 <div>
                     <img className=' ps-10 h-96' src={log1} alt="" />

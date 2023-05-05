@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { AuthContext } from '../../Providers/Authprovider';
 import { Link } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
 
 
 const Registatoin = () => {
@@ -22,6 +23,7 @@ const Registatoin = () => {
         event.preventDefault();
         setsucces('');
         seterror('');
+        <ToastContainer></ToastContainer>
 
         const name = event.target.name.value;
         const photo = event.target.photo.value;
@@ -37,9 +39,9 @@ const Registatoin = () => {
         .then(result =>{
             const reuser = result.user;
             console.log(reuser);
+            seterror('');
             event.target.reset();
-            seterror('')
-           alert('YOu has been created succesfully')
+            toast('YOu has been created succesfully')
         })
         .catch(error => {
             console.log(error.message);

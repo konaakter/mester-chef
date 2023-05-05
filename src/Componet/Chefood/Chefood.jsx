@@ -19,6 +19,7 @@ const Chefood = (props) => {
         toast("Fevorite!")
 
     }
+    /************************************************chef recipe show****************************** */
 
     return (
         <div className=''>
@@ -77,6 +78,7 @@ const Chefood = (props) => {
 };
 
 export default Chefood;
+/*alert('YOu has been created succesfully')*/
 
 
         

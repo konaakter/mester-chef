@@ -14,7 +14,11 @@ const Home = () => {
             <div>
                 <Banner></Banner>
             </div>
+            {/* ******************************************chef card************************ */}
             <div className=' bg-color'>
+            <h1 className='text-center text-6xl font-bold color pt-36 pb-6'>FRANCH <span className='text-white'> COUSIN SHEF</span> </h1>
+
+
                 <div className=' container mx-auto pt-24 pb-16 lg:grid grid-cols-3 '>
 
                     {
@@ -29,11 +33,13 @@ const Home = () => {
                 </div>
 
             </div>
+            {/************************************ home ar 3 section */}
             <div className='bg-color'>
                 <div className='container mx-auto'>
                 <Restudetchef></Restudetchef>
                 </div>
             </div>
+            {/* fotter******************************************************************************* */}
 
             <div>
                 <div className='bg-color pt-20'>

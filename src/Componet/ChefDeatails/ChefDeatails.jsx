@@ -8,6 +8,8 @@ const ChefDeatails = () => {
     const loders = useLoaderData();
     console.log(loders);
     const { bio, _id, name, experience, numberOfRecipe, recipes, photo, likes } = loders;
+
+    /***********************************************chef ar details banar************************* */
     return (
         <div>
             <div className=' bg-color '>

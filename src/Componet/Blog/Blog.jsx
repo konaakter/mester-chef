@@ -1,6 +1,8 @@
 import React from 'react';
 
 const Blog = () => {
+
+    /**********************************************ouestoin ans******************************** */
     return (
         <div className='bg-color text-white pb-20'>
             <div className='container max-auto lg:p-32 p-20'>

@@ -2,6 +2,8 @@ import React from 'react';
 import { FaBeer, FaGoogle, FaGithub, FaFacebookF, FaInstagram, FaTwitter, FaGlideG, FaPhone, FaRegEnvelope, FaSearchLocation } from 'react-icons/fa';
 
 const Footter = () => {
+
+    /**********************************************************fotter************************************ */
     return (
         <div>
         <div className='bg-black '>

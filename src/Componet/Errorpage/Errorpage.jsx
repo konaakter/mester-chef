@@ -5,6 +5,8 @@ import logo from '../../imge/error.png'
 
 const Errorpage = () => {
     const {error, status} = useRouteError()
+
+    /**********************************************error page show************************************ */
     return (
         <div>
         <section className='flex items-center h-screen p-16 bg-gray-100 text-gray-900'>

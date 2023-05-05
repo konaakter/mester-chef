@@ -8,10 +8,13 @@ const ChefCard = (props) => {
 
     const { bio, _id, name, experience, numberOfRecipe, recipes, photo, likes } = props.loder;
 
+    /**************************************home page chef card******************************* */
+
 
     return (
         <div>
             <div className='text-white text-center' >
+
                 <div className='px-7 py-16 bg-black'>
                     <LazyLoad width={400} threshold={0.95}>
                         <img className='h-80 w-50 mx-auto hover:rounded-bl-lg ' src={photo} alt="" />
