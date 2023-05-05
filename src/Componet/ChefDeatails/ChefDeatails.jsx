@@ -2,6 +2,7 @@ import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Chefood from '../Chefood/Chefood';
 import { FaThumbsUp } from 'react-icons/fa';
+import LazyLoad from 'react-lazy-load';
 
 const ChefDeatails = () => {
     const loders = useLoaderData();
@@ -36,7 +37,11 @@ const ChefDeatails = () => {
 
                     </div>
                     <div>
+                        <LazyLoad>
                         <img className='w-full p-2  border border-orange-300 m-3' src={photo} alt="" />
+
+
+                        </LazyLoad>
 
                     </div>
 

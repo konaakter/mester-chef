@@ -2,6 +2,7 @@ import React from 'react';
 import logo6 from '../../imge/chef2.jpg'
 import { Link } from 'react-router-dom';
 import { FaThumbsUp } from 'react-icons/fa';
+import LazyLoad from 'react-lazy-load';
 
 const ChefCard = (props) => {
 
@@ -12,7 +13,10 @@ const ChefCard = (props) => {
         <div>
             <div className='text-white text-center' >
                 <div className='px-7 py-16 bg-black'>
-                    <img className='h-80 w-50 mx-auto hover:rounded-bl-lg ' src={photo} alt="" />
+                    <LazyLoad width={400} threshold={0.95}>
+                        <img className='h-80 w-50 mx-auto hover:rounded-bl-lg ' src={photo} alt="" />
+
+                    </LazyLoad>
                     <h1 className=' pt-5'>{name}</h1>
                     <p>{experience}</p>
                     <div className='flex flex-row justify-evenly'>
